@@ -24,5 +24,5 @@ try:
         fire_ifttt()
     else:
         logger.info("Homerun is online.")
-except e:
+except:
     fire_ifttt()
