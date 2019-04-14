@@ -19,7 +19,7 @@ def fire_ifttt():
     logger.warn("request to IFTTT sent.  IFTTT request status code: %s" % request_to_trigger_ifttt.status_code)
 
 try:
-    request_for_homerun_online = requests.get(HOMERUN_URL+"lflflflflflfl")
+    request_for_homerun_online = requests.get(HOMERUN_URL)
     if request_for_homerun_online.status_code != 200:
         fire_ifttt()
     else:
