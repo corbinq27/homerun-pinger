@@ -16,7 +16,7 @@ logger.setLevel(logging.INFO)
 def fire_ifttt():
     logger.warn("can't contact homerun. Sending notification to IFTTT...")
     request_to_trigger_ifttt = requests.get(URL_FORMAT % (EVENT, IFTTT_KEY))
-    logger.warn("request to IFTTT sent.  IFTTT request: %s" % request_to_trigger_ifttt.text)
+    logger.warn("request to IFTTT sent.  IFTTT request status code: %s" % request_to_trigger_ifttt.status_code)
 
 try:
     request_for_homerun_online = requests.get(HOMERUN_URL+"lflflflflflfl")
